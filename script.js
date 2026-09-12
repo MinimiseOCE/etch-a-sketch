@@ -1,14 +1,20 @@
 const gamebox = document.querySelector("#gamebox")
+let res = 4;
 
-
-
-for (let i = 0; i < 4; i++) {
-    const row = document.createElement("div")
-    row.setAttribute("id", "row");
-    for (let j = 0; j < 4; j++) {
-        const box = document.createElement("div")
-        box.setAttribute("id", "box");
-        row.appendChild(box)
+document.getElementById("resBtn").addEventListener("click", () => {
+    gamebox.replaceChildren();
+    res = parseInt(prompt("Select Resolution")) 
+    for (let i = 0; i < res; i++) {
+        const row = document.createElement("div")
+        row.classList.add("row"); 
+        for (let j = 0; j < res; j++) {
+            const box = document.createElement("div")
+            box.classList.add("box"); 
+            box.addEventListener("click", () => {
+                box.style.backgroundColor = "red"; 
+            });
+            row.appendChild(box)
+        }
+        gamebox.appendChild(row)
     }
-    gamebox.appendChild(row)
-}
+} )
