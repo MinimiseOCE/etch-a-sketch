@@ -1,5 +1,6 @@
 const gamebox = document.querySelector("#gamebox")
-let res = 4;
+
+let color = "black";
 
 document.getElementById("resBtn").addEventListener("click", () => {
     gamebox.replaceChildren();
@@ -10,11 +11,44 @@ document.getElementById("resBtn").addEventListener("click", () => {
         for (let j = 0; j < res; j++) {
             const box = document.createElement("div")
             box.classList.add("box"); 
-            box.addEventListener("click", () => {
-                box.style.backgroundColor = "red"; 
-            });
+            let bgOpacity = 0
+
+            const paint = (e) => {
+                e.preventDefault();
+
+                if (e.type === 'mousedown' || e.buttons === 1) {
+                    box.style.backgroundColor = color; 
+                    bgOpacity = (bgOpacity + 0.1);
+                    box.style.opacity = (bgOpacity);
+                }
+            };
+
+            box.addEventListener("mousedown", paint);
+            box.addEventListener("mouseover", paint);
+
             row.appendChild(box)
         }
         gamebox.appendChild(row)
     }
 } )
+
+document.getElementById("clearBtn").addEventListener("click", () => {
+    gamebox.replaceChildren();
+})
+
+document.getElementById("blackBtn").addEventListener("click", () => {
+    color = "black"
+})
+
+document.getElementById("redBtn").addEventListener("click", () => {
+    color = "red"
+})
+
+document.getElementById("blueBtn").addEventListener("click", () => {
+    color = "blue"
+})
+
+document.getElementById("greenBtn").addEventListener("click", () => {
+    color = "green"
+})
+
