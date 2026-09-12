@@ -1,10 +1,10 @@
-# etch-a-sketch
+# Etch a Sketch
 A Drawing Program where you can draw a grid, and draw across it
 
 ## Goals
-Practise javascript
-Practise manipulating the DOM
-Practise event listeners
+- Practise javascript
+- Practise manipulating the DOM
+- Practise event listeners
 
 ## What I Learnt
 How to utiize the DOM to draw smooth lines and manipulate local variables inside divs
