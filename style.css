@@ -1,3 +1,6 @@
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 #gamebox {
     width: 512px;
     height: 512px;
@@ -6,6 +9,23 @@
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
+}
+
+.gridSize {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gridButton {
+    width: 64px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.gridButton:hover {
+    opacity: 0.9;
+    scale: 1.1;
 }
 
 .row {

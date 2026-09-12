@@ -2,9 +2,8 @@ const gamebox = document.querySelector("#gamebox")
 
 let color = "black";
 
-document.getElementById("resBtn").addEventListener("click", () => {
+const drawGrid = function(res) {
     gamebox.replaceChildren();
-    res = parseInt(prompt("Select Resolution")) 
     for (let i = 0; i < res; i++) {
         const row = document.createElement("div")
         row.classList.add("row"); 
@@ -30,6 +29,19 @@ document.getElementById("resBtn").addEventListener("click", () => {
         }
         gamebox.appendChild(row)
     }
+}
+
+document.getElementById("grid4").addEventListener("click", () => {
+    drawGrid(4)
+} )
+document.getElementById("grid8").addEventListener("click", () => {
+    drawGrid(8)
+} )
+document.getElementById("grid16").addEventListener("click", () => {
+    drawGrid(16)
+} )
+document.getElementById("grid32").addEventListener("click", () => {
+    drawGrid(32)
 } )
 
 document.getElementById("clearBtn").addEventListener("click", () => {
