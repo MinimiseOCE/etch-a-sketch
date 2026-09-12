@@ -1,0 +1,27 @@
+#gamebox {
+    width: 512px;
+    height: 512px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+#row {
+    display: flex;
+    flex: 1;
+    justify-content: stretch;
+}
+
+#box {
+    border-style: solid;
+    flex: 1;
+}
+
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
